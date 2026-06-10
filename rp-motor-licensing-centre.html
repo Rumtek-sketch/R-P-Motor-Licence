@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R&P Motor Licensing Centre — Baneshwar More, Siliguri</title>
+<meta name="description" content="Driving licence, learner's licence, RC transfer and vehicle documentation services at Baneshwar More, Siliguri, West Bengal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#0B3D91;        /* highway sign blue */
+    --blue-dark:#072A66;
+    --yellow:#F5B700;      /* road sign yellow */
+    --asphalt:#1C1C1C;
+    --paper:#F7F8FA;
+    --line:#D8DDE6;
+    --white:#FFFFFF;
+    --green:#1A7F37;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Barlow',sans-serif;color:var(--asphalt);background:var(--paper);line-height:1.6}
+  h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif;line-height:1.1}
+  img{max-width:100%}
+  a{color:inherit}
+
+  /* ---------- road-line divider (signature) ---------- */
+  .road-divider{height:14px;background:var(--asphalt);position:relative;overflow:hidden}
+  .road-divider::after{content:"";position:absolute;top:50%;left:0;right:0;height:3px;transform:translateY(-50%);
+    background:repeating-linear-gradient(90deg,var(--yellow) 0 36px,transparent 36px 60px)}
+
+  /* ---------- header ---------- */
+  header{background:var(--blue);color:var(--white);position:sticky;top:0;z-index:50;box-shadow:0 2px 10px rgba(7,42,102,.35)}
+  .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;gap:16px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand-badge{width:46px;height:46px;border-radius:8px;background:var(--yellow);color:var(--asphalt);
+    display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed';font-weight:700;font-size:20px;
+    border:3px solid var(--white);letter-spacing:.5px}
+  .brand h1{font-size:22px;letter-spacing:.5px;text-transform:uppercase}
+  .brand small{display:block;font-family:'Barlow';font-size:11px;font-weight:400;opacity:.85;letter-spacing:1.5px;text-transform:uppercase}
+  nav.links{display:flex;gap:22px;font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:.8px}
+  nav.links a{text-decoration:none;opacity:.9;padding:4px 0;border-bottom:2px solid transparent}
+  nav.links a:hover,nav.links a:focus-visible{border-bottom-color:var(--yellow);opacity:1;outline:none}
+  .nav-cta{background:var(--yellow);color:var(--asphalt);text-decoration:none;font-weight:600;font-size:14px;
+    padding:9px 18px;border-radius:6px;text-transform:uppercase;letter-spacing:.6px}
+  .nav-cta:hover{background:#ffc81a}
+
+  /* ---------- hero ---------- */
+  .hero{background:linear-gradient(160deg,var(--blue) 0%,var(--blue-dark) 100%);color:var(--white);padding:64px 20px 80px}
+  .hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+  .eyebrow{display:inline-block;background:rgba(245,183,0,.15);border:1px solid var(--yellow);color:var(--yellow);
+    font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:4px;margin-bottom:18px;font-weight:600}
+  .hero h2{font-size:clamp(38px,5.5vw,58px);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+  .hero h2 span{color:var(--yellow)}
+  .hero p{font-size:17px;max-width:520px;opacity:.92;margin-bottom:28px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;text-decoration:none;font-weight:600;padding:13px 26px;border-radius:6px;font-size:15px;
+    text-transform:uppercase;letter-spacing:.8px;border:2px solid transparent;cursor:pointer}
+  .btn-yellow{background:var(--yellow);color:var(--asphalt)}
+  .btn-yellow:hover{background:#ffc81a}
+  .btn-ghost{border-color:rgba(255,255,255,.5);color:var(--white)}
+  .btn-ghost:hover{border-color:var(--white)}
+
+  /* licence card graphic */
+  .dl-card{background:linear-gradient(135deg,#FDFBF4,#EFEAD8);color:var(--asphalt);border-radius:14px;padding:20px 22px;
+    box-shadow:0 24px 50px rgba(0,0,0,.35);transform:rotate(3deg);max-width:380px;margin-left:auto;border:1px solid #E2DCC6}
+  .dl-card .dl-top{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--blue);padding-bottom:8px;margin-bottom:12px}
+  .dl-card .dl-top strong{font-family:'Barlow Condensed';font-size:15px;color:var(--blue);text-transform:uppercase;letter-spacing:1px}
+  .dl-card .dl-top em{font-style:normal;font-size:11px;background:var(--blue);color:#fff;padding:2px 8px;border-radius:3px;letter-spacing:1px}
+  .dl-row{display:flex;gap:14px}
+  .dl-photo{width:74px;height:90px;background:repeating-linear-gradient(45deg,#cfd6e4 0 6px,#bfc8da 6px 12px);border-radius:6px;flex-shrink:0;border:1px solid #aab4c8}
+  .dl-fields{font-size:12px;width:100%}
+  .dl-fields div{display:flex;justify-content:space-between;border-bottom:1px dashed #C9C2A8;padding:4px 0}
+  .dl-fields b{font-weight:600;color:#555}
+  .dl-strip{margin-top:12px;height:10px;border-radius:5px;
+    background:repeating-linear-gradient(90deg,var(--yellow) 0 22px,var(--asphalt) 22px 34px)}
+
+  /* ---------- sections ---------- */
+  section{padding:64px 20px}
+  .wrap{max-width:1100px;margin:0 auto}
+  .sec-head{margin-bottom:36px}
+  .sec-head .eyebrow{background:rgba(11,61,145,.07);border-color:var(--blue);color:var(--blue)}
+  .sec-head h3{font-size:clamp(28px,4vw,40px);text-transform:uppercase;color:var(--blue)}
+
+  /* services */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:24px;border-top:5px solid var(--yellow);
+    transition:transform .15s ease,box-shadow .15s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(11,61,145,.12)}
+  .card h4{font-family:'Barlow Condensed';font-size:21px;text-transform:uppercase;color:var(--blue);margin-bottom:8px;letter-spacing:.5px}
+  .card p{font-size:14.5px;color:#444}
+
+  /* process */
+  .process{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;counter-reset:step}
+  .step{position:relative;padding:22px 20px 20px;background:var(--paper);border-radius:10px;border:1px solid var(--line)}
+  .step::before{counter-increment:step;content:counter(step,decimal-leading-zero);
+    font-family:'Barlow Condensed';font-weight:700;font-size:30px;color:var(--yellow);
+    -webkit-text-stroke:1px var(--blue);display:block;margin-bottom:6px}
+  .step h4{font-family:'Barlow Condensed';font-size:19px;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+  .step p{font-size:14px;color:#444}
+
+  /* ---------- enquiry ---------- */
+  .enquiry{background:linear-gradient(160deg,var(--blue) 0%,var(--blue-dark) 100%);color:var(--white)}
+  .enq-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
+  .enq-info h3{font-size:clamp(28px,4vw,40px);text-transform:uppercase;margin-bottom:14px}
+  .enq-info h3 span{color:var(--yellow)}
+  .enq-info p{opacity:.92;margin-bottom:22px;max-width:440px}
+  .enq-points{list-style:none;font-size:15px}
+  .enq-points li{padding:8px 0 8px 28px;position:relative}
+  .enq-points li::before{content:"";position:absolute;left:0;top:14px;width:14px;height:3px;background:var(--yellow)}
+  form{background:var(--white);color:var(--asphalt);border-radius:12px;padding:30px 28px;box-shadow:0 24px 50px rgba(0,0,0,.3)}
+  form h4{font-family:'Barlow Condensed';font-size:24px;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+  form .sub{font-size:13px;color:#666;margin-bottom:20px}
+  .field{margin-bottom:16px}
+  label{display:block;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;color:var(--blue);margin-bottom:6px}
+  input,select,textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:7px;font-family:'Barlow';
+    font-size:15px;background:var(--paper);color:var(--asphalt)}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--yellow);border-color:var(--blue)}
+  textarea{resize:vertical;min-height:90px}
+  .submit-btn{width:100%;background:var(--blue);color:var(--white);border:none;padding:14px;border-radius:7px;
+    font-family:'Barlow';font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:1px;cursor:pointer}
+  .submit-btn:hover{background:var(--blue-dark)}
+  .submit-btn:disabled{opacity:.6;cursor:wait}
+  .form-msg{margin-top:14px;padding:12px 14px;border-radius:7px;font-size:14px;display:none}
+  .form-msg.ok{display:block;background:#E7F6EC;color:var(--green);border:1px solid #BFE5CB}
+  .form-msg.err{display:block;background:#FDECEC;color:#B3261E;border:1px solid #F2C5C2}
+
+  /* ---------- contact / footer ---------- */
+  .contact .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .contact .card{border-top-color:var(--blue)}
+  .contact .card b{display:block;font-family:'Barlow Condensed';font-size:18px;text-transform:uppercase;color:var(--blue);margin-bottom:6px;letter-spacing:.5px}
+  .map-link{display:inline-block;margin-top:8px;font-size:14px;font-weight:600;color:var(--blue)}
+  footer{background:var(--asphalt);color:#CFCFCF;text-align:center;padding:26px 20px;font-size:13.5px}
+  footer b{color:var(--yellow)}
+
+  @media(max-width:860px){
+    .hero-inner,.enq-grid{grid-template-columns:1fr}
+    .dl-card{margin:0 auto;transform:rotate(0)}
+    nav.links{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .card,.card:hover{transition:none;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <div class="brand-badge">R&amp;P</div>
+      <h1>R&amp;P Motor Licensing Centre
+        <small>Baneshwar More · Siliguri · West Bengal</small>
+      </h1>
+    </div>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#process">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#enquiry">Enquire Now</a>
+  </div>
+</header>
+<div class="road-divider" aria-hidden="true"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">Licensing &amp; Vehicle Documentation Services</span>
+      <h2>Your Licence Work, <span>Done Right.</span></h2>
+      <p>From learner's licence to RC transfer — R&amp;P Motor Licensing Centre handles your RTO paperwork with complete guidance, transparent charges, and timely follow-up. Visit us at Baneshwar More, Siliguri.</p>
+      <div class="hero-actions">
+        <a class="btn btn-yellow" href="#enquiry">Send an Enquiry</a>
+        <a class="btn btn-ghost" href="#services">View Services</a>
+      </div>
+    </div>
+    <div class="dl-card" aria-hidden="true">
+      <div class="dl-top"><strong>Driving Licence</strong><em>WB</em></div>
+      <div class="dl-row">
+        <div class="dl-photo"></div>
+        <div class="dl-fields">
+          <div><b>Name</b><span>YOUR NAME</span></div>
+          <div><b>DL No.</b><span>WB-73 ××××××</span></div>
+          <div><b>Class</b><span>LMV / MCWG</span></div>
+          <div><b>Valid Till</b><span>20 Years</span></div>
+        </div>
+      </div>
+      <div class="dl-strip"></div>
+    </div>
+  </div>
+</div>
+<div class="road-divider" aria-hidden="true"></div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">What We Handle</span>
+      <h3>Our Services</h3>
+    </div>
+    <div class="grid">
+      <div class="card"><h4>Learner's Licence (LL)</h4><p>New learner's licence application, online slot booking, document preparation and test guidance.</p></div>
+      <div class="card"><h4>Driving Licence (DL)</h4><p>Permanent DL application for two-wheeler (MCWG) and four-wheeler (LMV), including driving test scheduling.</p></div>
+      <div class="card"><h4>DL Renewal</h4><p>Renewal of expired or expiring driving licences with medical certificate assistance where required.</p></div>
+      <div class="card"><h4>Duplicate DL / Correction</h4><p>Lost licence replacement, name/address correction and smart-card licence updates.</p></div>
+      <div class="card"><h4>RC Transfer &amp; Ownership</h4><p>Vehicle ownership transfer, hypothecation addition/removal and NOC processing.</p></div>
+      <div class="card"><h4>Vehicle Documentation</h4><p>Fitness, permit, tax token, address change and other RTO-related vehicle paperwork support.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Simple &amp; Transparent</span>
+      <h3>How It Works</h3>
+    </div>
+    <div class="steps">
+      <div class="step"><h4>Enquire</h4><p>Fill the enquiry form or call us with your requirement.</p></div>
+      <div class="step"><h4>Document Check</h4><p>We tell you exactly which documents are needed — no surprises later.</p></div>
+      <div class="step"><h4>Application &amp; Slot</h4><p>We file your application and book your test/appointment slot.</p></div>
+      <div class="step"><h4>Collect &amp; Done</h4><p>Track your status with us until the licence or document reaches your hand.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+<section id="enquiry" class="enquiry">
+  <div class="wrap enq-grid">
+    <div class="enq-info">
+      <span class="eyebrow">Get Started Today</span>
+      <h3>Send Your <span>Enquiry</span></h3>
+      <p>Tell us what you need — our team will call you back with the document list, charges and timeline.</p>
+      <ul class="enq-points">
+        <li>Response within working hours, usually the same day</li>
+        <li>Clear document checklist before you visit</li>
+        <li>Transparent service charges — confirmed upfront</li>
+        <li>Local centre at Baneshwar More, Siliguri</li>
+      </ul>
+    </div>
+
+    <form id="enquiryForm" novalidate>
+      <h4>Enquiry Form</h4>
+      <p class="sub">Fields marked * are required. Your details go directly to our team.</p>
+      <div class="field">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" required placeholder="e.g. Rohit Sharma">
+      </div>
+      <div class="field">
+        <label for="phone">Phone / WhatsApp Number *</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9+\s-]{10,15}" placeholder="e.g. 98XXXXXXXX">
+      </div>
+      <div class="field">
+        <label for="email">Email (optional)</label>
+        <input type="email" id="email" name="email" placeholder="e.g. you@email.com">
+      </div>
+      <div class="field">
+        <label for="service">Service Needed *</label>
+        <select id="service" name="service" required>
+          <option value="">— Select a service —</option>
+          <option>Learner's Licence (LL)</option>
+          <option>Driving Licence (DL)</option>
+          <option>DL Renewal</option>
+          <option>Duplicate DL / Correction</option>
+          <option>RC Transfer / Ownership</option>
+          <option>Other Vehicle Documentation</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Message (optional)</label>
+        <textarea id="message" name="message" placeholder="Briefly describe your requirement..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn" id="submitBtn">Submit Enquiry</button>
+      <div class="form-msg" id="formMsg" role="status"></div>
+    </form>
+  </div>
+</section>
+<div class="road-divider" aria-hidden="true"></div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Visit Us</span>
+      <h3>Contact &amp; Location</h3>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <b>Address</b>
+        <p>R&amp;P Motor Licensing Centre<br>Baneshwar More, Siliguri<br>West Bengal, India</p>
+        <a class="map-link" href="https://www.google.com/maps/search/Baneshwar+More+Siliguri" target="_blank" rel="noopener">Open in Google Maps →</a>
+      </div>
+      <div class="card">
+        <b>Phone &amp; WhatsApp</b>
+        <p>Call: <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a><br>WhatsApp: <a href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">Message us</a></p>
+        <p style="font-size:13px;color:#666;margin-top:6px">Replace with your actual numbers.</p>
+      </div>
+      <div class="card">
+        <b>Working Hours</b>
+        <p>Monday – Saturday<br>10:00 AM – 7:00 PM<br>Sunday: Closed</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><b>R&amp;P Motor Licensing Centre</b> · Baneshwar More, Siliguri, West Bengal</p>
+  <p>© 2026 R&amp;P Motor Licensing Centre. All rights reserved.</p>
+</footer>
+
+<script>
+/* ============================================================
+   GOOGLE SHEETS CONNECTION
+   1. Follow the setup guide (provided separately) to create a
+      Google Apps Script Web App linked to your Google Sheet.
+   2. Paste the Web App URL below, replacing the placeholder.
+   ============================================================ */
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwjMhLfmy7Dk0DNtki9wAejn3zO9CotU9P78cJ0dLc_pBB40ZEZSDCb65JWOGSzLtEjrA/exec";
+
+const form = document.getElementById("enquiryForm");
+const btn  = document.getElementById("submitBtn");
+const msg  = document.getElementById("formMsg");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  msg.className = "form-msg";
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+  if (SCRIPT_URL.startsWith("PASTE_")) {
+    msg.textContent = "Form is not connected yet. Please add your Google Apps Script URL in the website code.";
+    msg.classList.add("err");
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = "Submitting...";
+
+  const data = new FormData(form);
+  data.append("timestamp", new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }));
+
+  try {
+    await fetch(SCRIPT_URL, { method: "POST", mode: "no-cors", body: data });
+    msg.textContent = "Thank you! Your enquiry has been received. Our team will contact you shortly.";
+    msg.classList.add("ok");
+    form.reset();
+  } catch (err) {
+    msg.textContent = "Something went wrong. Please try again or call us directly.";
+    msg.classList.add("err");
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Submit Enquiry";
+  }
+});
+</script>
+</body>
+</html>
